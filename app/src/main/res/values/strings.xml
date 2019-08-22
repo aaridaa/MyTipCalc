@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyTipCalc</string>
+    <string name="poor_statement">We are sorry you had a poor experience</string>
+    <string name="mediocre_statement">Please consider coming again</string>
+    <string name="good_statement">We are glad you enjoyed!</string>
+    <string name="excellent_statement">:)</string>
+</resources>

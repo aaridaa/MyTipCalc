@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/geo"
+        android:shadowColor="#000C0B0B"
+        android:text="Tip Calculator"
+        android:textColor="@color/colorPrimary"
+        android:textSize="35sp" />
+
+    <EditText
+        android:id="@+id/billEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Cost of Bill"
+        android:inputType="numberDecimal"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <EditText
+        android:id="@+id/percentEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Percent"
+        android:inputType="numberDecimal"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/geo"
+        android:onClick="getTip"
+        android:text="Calculate Tip"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip: "
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/tipTextView"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: "
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/totalTextView"
+        />
+
+    <TextView
+        android:id="@+id/qualityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/geo"
+        android:text="Quality of Service"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/poorCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poor"/>
+
+    <CheckBox
+        android:id="@+id/mediocreCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mediocre"/>
+
+    <CheckBox
+        android:id="@+id/goodCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Good"/>
+
+    <CheckBox
+        android:id="@+id/excellentCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excellent"/>
+
+
+</LinearLayout>
