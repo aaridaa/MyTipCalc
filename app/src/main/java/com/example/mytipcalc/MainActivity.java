@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,20 +16,20 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    CheckBox poor, mediocre, good, excellent;
+    RadioButton poor, mediocre, good, excellent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        poor = (CheckBox) findViewById(R.id.poorCheckBox);
+        poor = (RadioButton) findViewById(R.id.poorRadio);
         poor.setOnClickListener(this);
-        mediocre = (CheckBox) findViewById(R.id.mediocreCheckBox);
+        mediocre = (RadioButton) findViewById(R.id.mediocreRadio);
         mediocre.setOnClickListener(this);
-        good = (CheckBox) findViewById(R.id.goodCheckBox);
+        good = (RadioButton) findViewById(R.id.goodRadio);
         good.setOnClickListener(this);
-        excellent = (CheckBox) findViewById(R.id.excellentCheckBox);
+        excellent = (RadioButton) findViewById(R.id.excellentRadio);
         excellent.setOnClickListener(this);
     }
 
@@ -61,20 +62,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         switch (v.getId()) {
-            case R.id.poorCheckBox:
+            case R.id.poorRadio:
                 if (poor.isChecked())
                     Toast.makeText(getApplicationContext(), "We're sorry you had a poor experience :(", Toast.LENGTH_LONG).show();
                 break;
 
-            case R.id.mediocreCheckBox:
+            case R.id.mediocreRadio:
                 if (mediocre.isChecked())
                 Toast.makeText(getApplicationContext(), "Please consider coming again", Toast.LENGTH_LONG).show();
                 break;
-            case R.id.goodCheckBox:
+            case R.id.goodRadio:
                 if (good.isChecked())
                     Toast.makeText(getApplicationContext(), "We're glad you enjoyed!", Toast.LENGTH_LONG).show();
                 break;
-            case R.id.excellentCheckBox:
+            case R.id.excellentRadio:
                 if (excellent.isChecked())
                     Toast.makeText(getApplicationContext(), ":)", Toast.LENGTH_LONG).show();
                 break;
